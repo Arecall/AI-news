@@ -1,0 +1,9 @@
+node_modules
+frontend.log
+dist
+*.log
+out.html
+direct.html
+headers.txt
+apple-design-specs.md
+

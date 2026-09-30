@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "2.6.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/",
+    "compress:images": "node scripts/compress-existing.js",
+    "compress:images:dry": "node scripts/compress-existing.js --dry-run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.1",
+    "@google/generative-ai": "^0.24.1",
+    "@mozilla/readability": "^0.6.0",
+    "axios": "^1.17.0",
+    "better-sqlite3": "^12.10.0",
+    "bottleneck": "^2.19.5",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "image-downloader": "^4.3.0",
+    "jsdom": "^29.1.1",
+    "node-cron": "^4.2.1",
+    "rss-parser": "^3.13.0",
+    "sharp": "^0.35.3"
+  }
+}

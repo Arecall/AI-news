@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    image: news-index-backend:2.6.4
+    container_name: news-index-backend
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      NODE_ENV: production
+      TZ: Asia/Shanghai
+      DB_PATH: /data/news.db
+      IMAGES_DIR: /data/images
+    volumes:
+      - ./data:/data
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    image: news-index-frontend:2.6.4
+    container_name: news-index-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
